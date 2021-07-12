@@ -1,0 +1,38 @@
+<div fxLayoutAlign="center center">
+    <mat-form-field fxFlex="50%">
+      <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+    </div>
+    
+    <mat-table [dataSource]="foodSource" matSort>
+      <ng-container matColumnDef="foodtype">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Type of food</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.foodtype }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="foodname">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.foodname }}</mat-cell>
+      </ng-container>
+        <ng-container matColumnDef="quantity">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Quantity</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.quantity }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="time">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Delivery time</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.time }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="price">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Price</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.price }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="rating">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Rating</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.rating }}</mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let rows; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    
+    <div class="container">
+        <a mat-raised-button routerLink="/orders" color="primary">Order now</a>
+    </div>

@@ -1,0 +1,39 @@
+<section>
+  <h1>Signup</h1>
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px"
+    #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field>
+      <input type="text" matInput placeholder="First name" ngModel name="name" required #nameInput="ngModel">
+      <mat-error *ngIf="nameInput.hasError('required')">Field must not be empty</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Surname" ngModel name="surname" required #surnameInput="ngModel">
+      <mat-error *ngIf="surnameInput.hasError('required')">Field must not be empty</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="email" matInput placeholder="Email address" ngModel name="email" required #emailInput="ngModel">
+      <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">Please enter valid email address</mat-error>
+    </mat-form-field>
+    <mat-form-field hintLabel="Password must contain at least 6 characters">
+      <input type="password" matInput placeholder="Password" ngModel name="password" required minlength="6" #passwordInput="ngModel">
+      <mat-hint align="end">{{ passwordInput.value?.length }} / 6</mat-hint>
+    </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Address" ngModel name="address" required #addressInput="ngModel">
+        <mat-error *ngIf="addressInput.hasError('required')">Field must not be empty</mat-error>
+      </mat-form-field>
+    <mat-form-field>
+        <span matPrefix>+381 &nbsp;</span>
+        <input type="phone" matInput placeholder="Phone number" ngModel name="phone" required #phoneInput="ngModel">
+        <mat-error *ngIf="phoneInput.hasError('required')">Field must not be empty</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Favourite food" ngModel name="fav" required #favInput="ngModel">
+      <mat-error *ngIf="favInput.hasError('required')">Field must not be empty</mat-error>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Signup</button>
+    <mat-label *ngIf="errorExists">{{errorText}}</mat-label>
+    <mat-checkbox color="primary" ngModel name="acceptance" required>I accept the terms of service</mat-checkbox>
+  </form>
+</section>

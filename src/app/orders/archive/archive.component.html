@@ -1,0 +1,55 @@
+<section fxLayoutAlign="center">
+    <mat-card fxFlex="500px" class="order">
+        <mat-card-header fxLayoutAlign="center">
+          <mat-card-title fxLayoutAlign="center">Order 1</mat-card-title>
+          <mat-card-subtitle fxLayoutAlign="center">Restaurant: Fine Sushi</mat-card-subtitle>
+          <mat-card-subtitle fxLayoutAlign="center">Address: Hadzi Djerina 28</mat-card-subtitle>
+        </mat-card-header>
+        <iframe fxLayoutAlign="center" mat-card-image src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d11325.617380444844!2d20.465740797458487!3d44.79294763089031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x475a7a9fad1e0beb%3A0x8033e9a99f4e5121!2zRmluZSBTdXNoaSwg0KXQsNGf0Lgt0ILQtdGA0LjQvdCwLCDQkdC10L7Qs9GA0LDQtA!3m2!1d44.803377!2d20.477898099999997!4m5!1s0x475a70675616a667%3A0x31457a4b1766e54a!2zVW5pdmVyeml0ZXQgU2luZ2lkdW51bSwg0JTQsNC90LjRmNC10LvQvtCy0LAsINCR0LXQvtCz0YDQsNC0!3m2!1d44.7821473!2d20.4790589!5e0!3m2!1ssr!2srs!4v1599560727338!5m2!1ssr!2srs" width="400" height="400" frameborder="0" style="border:0"></iframe>
+        <mat-card-content fxLayoutAlign="center">
+          <p>
+            Food: Yakitori
+            <br> 
+            Description: 130 grams. Japanese chicken kabob 2 pieces
+            <br>
+            Quantity: 2
+            <br>
+            Delivery time: 15 min.
+            <br>
+            Status: completed
+          </p>
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="center">
+    
+        </mat-card-actions>
+      </mat-card>
+    </section>
+    <br>
+    <section fxLayoutAlign="center">
+        <mat-card fxFlex="500px" class="order">
+            <mat-card-header fxLayoutAlign="center">
+              <mat-card-title fxLayoutAlign="center">Order 2</mat-card-title>
+              <mat-card-subtitle fxLayoutAlign="center">Restaurant: Big Pizza</mat-card-subtitle>
+              <mat-card-subtitle fxLayoutAlign="center">Address: Autokomanda</mat-card-subtitle>
+            </mat-card-header>
+            <iframe fxLayoutAlign="center" mat-card-image src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d5663.495012767987!2d20.467826926889458!3d44.7859526811302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x475a706b0f100fa5%3A0xa806f30f9580196!2zQmlnIFBpenphIC0gRG9zdGF2YSBCZW9ncmFkIEF1dG9rb21hbmRhLCDQlNGAINCc0LjQu9GD0YLQuNC90LAg0JjQstC60L7QstC40ZvQsCwg0JHQtdC-0LPRgNCw0LQ!3m2!1d44.7880426!2d20.4647395!4m5!1s0x475a70675616a667%3A0x31457a4b1766e54a!2zVW5pdmVyeml0ZXQgU2luZ2lkdW51bSwg0JTQsNC90LjRmNC10LvQvtCy0LAsINCR0LXQvtCz0YDQsNC0!3m2!1d44.7821473!2d20.4790589!5e0!3m2!1ssr!2srs!4v1599560978803!5m2!1ssr!2srs" width="400" height="400" frameborder="0" style="border:0"></iframe>
+            <mat-card-content fxLayoutAlign="center">
+              <p>
+                Food: Capricciosa
+                <br> 
+                Description: Peeled tomato, cheese, ham, mushrooms.
+                <br>
+                Quantity: 1
+                <br>
+                Delivery time: 5 min.
+                <br>
+                Status: In progress
+              </p>
+            </mat-card-content>
+            <mat-card-actions fxLayoutAlign="center">
+              <button mat-raised-button type="submit" onclick="location.href='/edit-order';" mat-raised-button color="primary">Edit</button>
+              <button mat-raised-button type="submit" mat-raised-button color="primary" (click)="onDelete()">Delete</button>
+            </mat-card-actions>
+          </mat-card>
+        </section>
+
